@@ -10,7 +10,7 @@ class DiscountCalculatorTEST{
         $this->asserEquals($expectedValue, $totalWithdiscount);
     }
     public function asserEquals($expectedValue, $actualValue){
-        if ($expectedValue===$actualValue){
+        if ($expectedValue !==$actualValue){
             $message = 'Expected: ' . $expectedValue . 'but got: '.$actualValue;
             throw new Exception(message:$message);
         }

@@ -1,7 +1,7 @@
 <?php
 
 include 'autoloader.php';
-include 'calculadoradesconto.php';
+include 'DiscountCalculator.php';
 
 $dicoutCalculator = new DiscountCalculator();
 echo $dicoutCalculator->apply(value:100)."\n";
