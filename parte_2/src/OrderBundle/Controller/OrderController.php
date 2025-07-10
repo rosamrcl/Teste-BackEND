@@ -32,8 +32,7 @@ class OrderController extends Controller
         CustomerRepository $customerRepository,
         ItemRepository $itemRepository,
         OrderService $orderService
-    )
-    {
+    ) {
         $this->customerRepository = $customerRepository;
         $this->itemRepository = $itemRepository;
         $this->orderService = $orderService;
@@ -87,7 +86,6 @@ class OrderController extends Controller
                 $description,
                 $creditCard
             );
-
         } catch (CustomerNotAllowedException $e) {
             return new Response(Response::PRECONDITIONS_FAIL, '1 - Customer not allowed');
         } catch (ItemNotAvailableException $e) {
